@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +25,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 20px;
     }
 
     body {
@@ -137,20 +138,33 @@
       text-decoration: none;
     }
 
+    .button:hover {
+      border-color: var(--accent);
+    }
+
     .button.primary {
       border-color: var(--accent);
       background: var(--accent);
       color: #071426;
     }
 
+    .button.primary:hover {
+      background: #93c5fd;
+    }
+
     section {
       padding: 58px 0;
       border-top: 1px solid var(--border);
+      scroll-margin-top: 20px;
     }
 
     h2 {
       margin: 0 0 12px;
       font-size: 2rem;
+    }
+
+    h3 {
+      line-height: 1.35;
     }
 
     .section-intro {
@@ -170,6 +184,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       background: var(--surface);
+      min-width: 0;
     }
 
     .card h3 {
@@ -179,6 +194,22 @@
 
     .card p {
       color: var(--muted);
+    }
+
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .card-links a {
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .card-links a:hover {
+      text-decoration: underline;
     }
 
     .tag-list {
@@ -238,6 +269,7 @@
   <header>
     <nav class="container" aria-label="Main navigation">
       <a class="brand" href="#home">Satvinder Singh</a>
+
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -249,6 +281,7 @@
   </header>
 
   <main>
+    <!-- HOME -->
     <section class="hero container" id="home">
       <p class="eyebrow">IT • Networking • Infrastructure • Programming</p>
 
@@ -264,44 +297,51 @@
         projects that demonstrate my approach to troubleshooting,
         connected systems and technology problem-solving.
       </p>
+
       <p class="location">
         Ontario, Canada · Authorized to work in Canada
       </p>
 
-     
-<div class="actions">
-  <a class="button primary" href="#projects">Explore my projects</a>
+      <div class="actions">
+        <a class="button primary" href="#projects">Explore my projects</a>
 
-  <a class="button"
-     href="Satvinder-Singh-Resume.pdf"
-     target="_blank"
-     rel="noopener noreferrer">
-    View Résumé ↗
-  </a>
+        <a
+          class="button"
+          href="Satvinder-Singh-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Résumé ↗
+        </a>
 
-  <a class="button"
-     href="https://github.com/satvindersingh2215"
-     target="_blank"
-     rel="noopener noreferrer">GitHub profile ↗</a>
-</div>
-
+        <a
+          class="button"
+          href="https://github.com/saatvindersingh2215"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub profile ↗
+        </a>
+      </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
       <div class="container">
         <h2>About me</h2>
-        <p class="section-intro">
-         I am an entry-level IT and networking professional with a
-         Wireless Information Networking diploma from Fleming College
-         and a Bachelor of Computer Applications from CBLU University.
-         My technical interests include network configuration,
-         troubleshooting, wireless technologies, network security,
-         IoT systems, and cloud infrastructure. Through academic
-         projects and hands-on labs, I have developed experience with
-         networking concepts, Linux, Windows, Raspberry Pi, and
-         technical collaboration.
 
+        <p class="section-intro">
+          I am an entry-level IT and networking professional with a
+          Wireless Information Networking diploma from Fleming College
+          and a Bachelor of Computer Applications from CBLU University.
+          My technical interests include network configuration,
+          troubleshooting, wireless technologies, network security,
+          IoT systems, and cloud infrastructure. Through academic
+          projects and hands-on labs, I have developed experience with
+          networking concepts, Linux, Windows, Raspberry Pi, and
+          technical collaboration.
         </p>
+
         <p class="section-intro">
           My academic and practical work has included web application
           development, connected-device experiments and exploring
@@ -309,12 +349,55 @@
           I use this portfolio to document my projects, explain
           technical decisions and demonstrate my developing skills.
         </p>
-     </div>
-  </section>
+      </div>
+    </section>
 
+    <!-- EDUCATION: SEPARATE FROM PROJECTS -->
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Wireless Information Networking (WIN) Diploma</h3>
+
+            <p>
+              <strong>Fleming College</strong><br>
+              Peterborough, Ontario · 2023–2025
+            </p>
+
+            <p>
+              Relevant coursework: Routing and Switching, Enterprise
+              Networking, Wireless Security, Mesh Networking, IoT,
+              SCADA, Cloud and Datacenter Computing, Unix Operating
+              Systems, and Cybersecurity.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p>
+              <strong>CBLU University</strong><br>
+              2018–2021
+            </p>
+
+            <p>
+              Relevant coursework: Programming in C, C++, and Java;
+              Data Structures; Database Systems; Operating Systems;
+              Web Design; Software Engineering; and Data Communication
+              and Networking.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
     <section id="skills">
       <div class="container">
-        <h2>Technical interests & skills</h2>
+        <h2>Technical interests &amp; skills</h2>
+
         <p class="section-intro">
           Technologies from my education and hands-on learning.
           Specific proficiency will be demonstrated through my projects.
@@ -323,7 +406,7 @@
         <ul class="tag-list">
           <li>Networking</li>
           <li>TCP/IP</li>
-          <li>Routing & Switching</li>
+          <li>Routing &amp; Switching</li>
           <li>Network Security</li>
           <li>Wireless Networks</li>
           <li>IoT</li>
@@ -337,130 +420,148 @@
       </div>
     </section>
 
+    <!-- PROJECTS: ITS OWN SECTION -->
     <section id="projects">
-      
-<section id="education" class="section">
-  <div class="container">
-    <h2>Education</h2>
-
-    <div class="project-card">
-      <h3>Wireless Information Networking (WIN) Diploma</h3>
-      <p class="project-meta">
-        Fleming College · Peterborough, Ontario · 2023–2025
-      </p>
-      <p>
-        Relevant coursework: Routing and Switching, Enterprise
-        Networking, Wireless Security, Mesh Networking, IoT,
-        SCADA, Cloud and Datacenter Computing, Unix Operating
-        Systems, and Cybersecurity.
-      </p>
-    </div>
-
-    <div class="project-card">
-      <h3>Bachelor of Computer Applications (BCA)</h3>
-      <p class="project-meta">
-        CBLU University · 2018–2021
-      </p>
-      <p>
-        Relevant coursework: Programming in C, C++, and Java;
-        Data Structures; Database Systems; Operating Systems;
-        Web Design; Software Engineering; and Data Communication
-        and Networking.
-      </p>
-    </div>
-  </div>
-</section>
-
       <div class="container">
         <h2>Featured projects</h2>
+
         <p class="section-intro">
-          A selection of projects I will document with technical details,
-          screenshots, source code and working demonstrations where possible.
+          Selected academic and hands-on projects. Each project will
+          include technical details, evidence and source code where
+          available. Project status is identified honestly.
         </p>
 
         <div class="grid">
+          <!-- NETWORK DESIGN PROJECT -->
           <article class="card">
-           
+            <h3>Small Business Network Design</h3>
 
-<h3>IoT Network Monitoring System</h3>
-<p class="project-meta">Planned Project · Raspberry Pi</p>
-<p>
-  A planned hands-on project to explore network connectivity
-  monitoring and automated diagnostics using a Raspberry Pi
-  and shell scripts. Implementation, monitoring features,
-  and testing are yet to be completed.
-</p>
+            <p>
+              A Cisco Packet Tracer networking project involving
+              network topology, VLANs, trunk configuration and
+              connectivity troubleshooting. The repository includes
+              the Packet Tracer project file for review.
+            </p>
 
+            <p><strong>Status:</strong> Project file available.</p>
 
-            <p><strong>Status:</strong> Project details coming soon.</p>
+            <div class="card-links">
+              <a
+                href="https://github.com/saatvindersingh2215/small-business-network-design"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Code &amp; Project File ↗
+              </a>
+            </div>
           </article>
 
-          
-<article class="card">
- 
-<h3>Dalhousie House E-Learning Platform</h3>
-<p>
-  A sponsor-facing e-learning platform developed as part
-  of a four-person Fleming College capstone project.
-  Contributed to administration features, user and course
-  management, account authentication, password recovery,
-  and navigation through searchable training materials.
-  The project also involved sponsor requirements gathering,
-  backlog management, and sprint planning.
-</p>
+          <!-- E-LEARNING PROJECT -->
+          <article class="card">
+            <h3>Dalhousie House E-Learning Platform</h3>
 
-  <p><strong>Status:</strong> Academic project — documentation in progress.</p>
-</article>
+            <p>
+              A sponsor-facing e-learning platform developed as part
+              of a four-person Fleming College capstone project.
+              My contributions included front-end/UI work and
+              administration and navigation features. The project
+              involved sponsor requirements gathering, backlog
+              management and sprint planning.
+            </p>
 
-<article class="card">
-  <h3>AWS IoT Connectivity Lab</h3>
-  <p>
-    A practical learning area for documenting device connectivity,
-    MQTT messaging and cloud-based IoT workflows using AWS IoT Core.
-    The case study will include the actual configuration, code
-    and test results.
-  </p>
-  <p><strong>Status:</strong> Details and evidence to be verified.</p>
-</article>
+            <p>
+              <strong>Status:</strong> Academic project;
+              documentation in progress.
+            </p>
+          </article>
 
-<article class="card">
-  <h3>Arduino & IoT Experiments</h3>
-  <p>
-    A project area for documenting connected-device experiments,
-    IoT dashboards and sensor workflows using Arduino and
-    Arduino IoT Cloud or Blynk, where applicable.
-  </p>
-  <p><strong>Status:</strong> Individual experiments to be documented.</p>
-</article>
+          <!-- PLANNED IOT PROJECT -->
+          <article class="card">
+            <h3>IoT Network Monitoring System</h3>
 
-<article class="card">
-  <h3>Networking & Infrastructure Lab</h3>
-  <p>
-    A technical lab portfolio for recording network configuration,
-    troubleshooting, wireless networking, security fundamentals
-    and infrastructure experiments, supported by diagrams
-    and reproducible test results.
-  </p>
-  <p><strong>Status:</strong> Lab evidence to be added.</p>
-</article>
+            <p>
+              A planned hands-on project to explore network
+              connectivity monitoring and automated diagnostics
+              using a Raspberry Pi and shell scripts.
+            </p>
 
+            <p>
+              <strong>Status:</strong> Planned; implementation
+              and testing are not yet complete.
+            </p>
+          </article>
+
+          <!-- AWS IOT -->
+          <article class="card">
+            <h3>AWS IoT Connectivity Lab</h3>
+
+            <p>
+              A learning project exploring device connectivity,
+              MQTT messaging and cloud-based IoT workflows using
+              AWS IoT Core. Configuration, code and test results
+              will be documented after verification.
+            </p>
+
+            <p>
+              <strong>Status:</strong> Evidence and configuration
+              details to be verified.
+            </p>
+          </article>
+
+          <!-- ARDUINO -->
+          <article class="card">
+            <h3>Arduino &amp; IoT Experiments</h3>
+
+            <p>
+              Experiments involving connected devices, sensors
+              and IoT dashboards using Arduino and platforms such
+              as Arduino IoT Cloud or Blynk, where applicable.
+            </p>
+
+            <p>
+              <strong>Status:</strong> Individual experiments
+              to be documented.
+            </p>
+          </article>
+
+          <!-- NETWORKING LABS -->
+          <article class="card">
+            <h3>Networking &amp; Infrastructure Labs</h3>
+
+            <p>
+              A collection of networking and infrastructure labs
+              covering configuration, troubleshooting, wireless
+              networking, security fundamentals and technical
+              testing, supported by diagrams and results.
+            </p>
+
+            <p>
+              <strong>Status:</strong> Lab evidence to be added.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container">
         <h2>Let's connect</h2>
+
         <p class="section-intro">
           I'm interested in entry-level opportunities in IT support,
           networking and infrastructure, as well as opportunities to
           collaborate and learn.
         </p>
 
-        <a class="button"
-           href="https://github.com/satvindersingh2215"
-           target="_blank"
-           rel="noopener noreferrer">Visit my GitHub ↗</a>
+        <a
+          class="button"
+          href="https://github.com/satvindersingh2215"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit my GitHub ↗
+        </a>
       </div>
     </section>
   </main>
@@ -472,3 +573,4 @@
   </footer>
 </body>
 </html>
+```
